@@ -1,0 +1,8 @@
+* {
+    outline: 2px dashed rgba(255, 0, 0, 0.2); /* Linea sottile per tutti gli elementi */
+}
+
+.card > * {
+    outline: 4px solid rgba(0, 213, 255, 0.2); /* Linea sottile per tutti gli elementi */
+}
+
