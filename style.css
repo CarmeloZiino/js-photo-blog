@@ -14,7 +14,7 @@ body {
 
 .card {
     background-color: white;
-    width: 350px;
+    width: 300px;
     height: 350px;
 }
 
@@ -26,9 +26,18 @@ img {
 
 #prima-riga {
  font-family: 'Edu Tas Beginner', sans-serif ;
+ color: gray;
 
 } 
 
 #seconda-riga {
-    font-family: 'Sometype Mono', sans-serif ;
-   }
+    font-family: 'Sometype Mono', monospace ;
+    color: gray;
+}
+
+.pin {
+    width: 5vh;
+    position: absolute;
+    left: 125px;
+    bottom: 225px;
+}
