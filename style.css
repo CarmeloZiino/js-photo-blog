@@ -21,6 +21,7 @@ body {
 img {
     width: 25vh;
     height: 25vh;
+    cursor: pointer;
 
 }
 
@@ -39,7 +40,7 @@ img {
     width: 5vh;
     position: absolute;
     left: 125px;
-    bottom: 225px;
+    bottom: 240px;
 }
 
 .modale {
@@ -62,12 +63,14 @@ justify-content: center;
 display: flex;
 flex-direction: column;
 
+justify-content: center;
 align-items: center;
 }
 
 .photo > img {
-    width: 80vh;
-    height: 80vh;
+    width: 70vh;
+    height: 70vh;
+    border: 2px solid white;
 }
 
 button{

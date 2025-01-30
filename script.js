@@ -9,38 +9,48 @@ Inseriamo un foglio JavaScript ed effettuiamo una chiamata AJAX all’API, sfrut
 
 const containerCards = document.getElementById("card-container");
 
-// 2. Creo un Array dove salvare le card
+// 2. Creo una chiamata all'API
 
-let cards = [];
-// let totalCards = 1; //Questa variabile mi setta il numero di chiamate che andrò a fare
+fetch("https://lanciweb.github.io/demo/api/pictures/")
+  .then((response) => response.json())
+  .then((data) =>
+    data.forEach((photo) => {
+      const { id, title, url, date } = photo;
+      const card = document.createElement("div");
+      card.classList.add(
+        "card",
+        "col-sm-12",
+        "col-md-6",
+        "col-lg-4",
+        "col-xl-4"
+      );
 
-// 3. Creo una chiamata all'API
-
-
-  fetch("https://lanciweb.github.io/demo/api/pictures/")
-    .then((response) => response.json())
-    .then((data) =>
-      data.forEach((photo) => {
-        const { id, title, url, date } = photo;
-        const card = document.createElement("div");
-        card.classList.add(
-          "card",
-          "col-sm-12",
-          "col-md-6",
-          "col-lg-4",
-          "col-xl-4"
-        );
-
-        card.innerHTML = ` 
+      card.innerHTML = ` 
                  <img src="./assets_day1/img/pin.svg" class="pin">
-                 <img id="img" src="${url}" class="card-img-top pt-2" alt="${title} data-idcard="${id}">
+                 <img id="img" src="${url}" class="card-img-top pt-2 imgmodal" alt="${title} data-idcard="${id}">
                  <div class="card-body">
                  <h5 id="prima-riga" class="card-title h2">${title}</h5>
                  <p id="seconda-riga" class="card-text h5">${date}</p>
              </div>
              `;
 
-        containerCards.appendChild(card);
-      }))
-     .catch((error) => console.error("Errore:", error));
+      containerCards.appendChild(card);
 
+      const photoCard = card.querySelector(".imgmodal");
+      const modale = document.getElementById("modale");
+      const divPhoto = document.getElementById("div-photo");
+
+      photoCard.addEventListener("click", function () {
+        modale.classList.remove("d-none");
+        modale.classList.add("d-flex");
+
+        divPhoto.innerHTML = `
+                             <img id="" src="${url}" alt="..." class="">
+                             <button id="closebtn" class="">Chiudi</button>
+         `;
+      });
+    })
+
+
+  )
+  .catch((error) => console.error("Errore:", error));
