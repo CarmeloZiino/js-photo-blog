@@ -19,13 +19,13 @@ fetch("https://lanciweb.github.io/demo/api/pictures/")
       const card = document.createElement("div");
       card.classList.add(
         "card",
-        "col-sm-12",
+        "col-12",
         "col-md-6",
-        "col-lg-4",
-        "col-xl-4"
+        "col-lg-4"
       );
 
       card.innerHTML = ` 
+      
                  <img src="./assets_day1/img/pin.svg" class="pin">
                  <img id="img" src="${url}" class="card-img-top pt-2 imgmodal" alt="${title} data-idcard="${id}">
                  <div class="card-body">
@@ -48,7 +48,14 @@ fetch("https://lanciweb.github.io/demo/api/pictures/")
                              <img id="" src="${url}" alt="..." class="">
                              <button id="closebtn" class="">Chiudi</button>
          `;
+         
+         const button = document.getElementById("closebtn");
+         button.addEventListener ("click" , function(){
+            modale.classList.remove("d-flex");
+            modale.classList.add("d-none");
+         })
       });
+      
     })
 
 

@@ -1,90 +1,97 @@
 header {
-    background-image: url(./assets_day1/img/wall.png);
+  background-image: url(./assets_day1/img/wall.png);
 }
 
 h1 {
-    font-family: 'Edu Tas Beginner', sans-serif;
-    text-transform: uppercase;
-    
+  font-family: "Edu Tas Beginner", sans-serif;
+  text-transform: uppercase;
 }
 
 body {
-    background-image: url(./assets_day1/img/cork.png);
+  background-image: url(./assets_day1/img/cork.png);
 }
 
 .card {
-    background-color: white;
-    width: 300px;
-    height: 350px;
+  background-color: white;
+  width: 100%;
+  max-width: 18rem;
+  height: auto;
+
+  position: relative;
+  justify-content: center;
 }
 
-img {
-    width: 25vh;
-    height: 25vh;
-    cursor: pointer;
+.card:hover {
+  transform: rotate(15deg);
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+  width: 35vw;
+}
 
+.img {
+  margin: 5px;
+  cursor: pointer;
 }
 
 #prima-riga {
- font-family: 'Edu Tas Beginner', sans-serif ;
- color: gray;
-
-} 
+  font-family: "Edu Tas Beginner", sans-serif;
+  color: rgb(0, 0, 0);
+}
 
 #seconda-riga {
-    font-family: 'Sometype Mono', monospace ;
-    color: gray;
+  font-family: "Sometype Mono", monospace;
+  color: rgb(0, 0, 0);
 }
 
 .pin {
-    width: 5vh;
-    position: absolute;
-    left: 125px;
-    bottom: 240px;
+  width: 5vh;
+  height: 5vh;
+  position: absolute;
+  bottom: 94%;
+  left: 45%;
 }
 
 .modale {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 999;
-    background-color: rgb(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background-color: rgb(0, 0, 0, 0.8);
 
-display: flex;
-flex-direction: column;
+  display: flex;
+  flex-direction: column;
 
-align-items: center;
-justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
-.photo{
-display: flex;
-flex-direction: column;
+.photo {
+  display: flex;
+  flex-direction: column;
 
-justify-content: center;
-align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .photo > img {
-    width: 70vh;
-    height: 70vh;
-    border: 2px solid white;
+  width: 70vh;
+  height: 70vh;
+  border: 2px solid white;
+  box-shadow: 0px 15px 50px rgba(223, 212, 7, 0.5);
 }
 
-button{
-    border: none;
-    background-color: rgba(18, 183, 233, 0.5);
-    color: aliceblue;
-    border-radius: 10pt;
-    font-size: 1.5rem;
-    font-family: 'Sometype Mono', monospace;
+button {
+  border: none;
+  background-color: rgba(18, 183, 233, 0.5);
+  color: aliceblue;
+  border-radius: 10pt;
+  font-size: 1.5rem;
+  font-family: "Sometype Mono", monospace;
 
-    width: 15vh;
+  width: 15vh;
 }
 
-button:hover{
-    background-color: rgba(230, 155, 18, 0.5);
-
+button:hover {
+  background-color: rgba(230, 155, 18, 0.5);
 }
